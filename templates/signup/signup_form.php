@@ -28,6 +28,7 @@
       </label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <p>Already have a account: <a href="/login.php">Click here</a></p>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
   </form>
   <?php load_template("signup_query"); ?>

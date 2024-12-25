@@ -28,15 +28,11 @@ function close_connection($conn){
 
 function user_data($username,$password,$email,$number) {
     $conn = connections();
-
-    // if ($conn->connect_error) {
-    //     die("Connection failed: " . $conn->connect_error);
-    //   }
       
       $sql = "INSERT INTO user_data (username, password, email, number) VALUES ('$username','$password','$email','$number')";
       
       if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        
       } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
       }
@@ -44,16 +40,4 @@ function user_data($username,$password,$email,$number) {
       $conn->close();
 }
 
-// function user_data($username,$password,$email,$number) {
-//     $conn = connections();
-     
-//       $sql = "INSERT INTO user_data (username, password, email, number) VALUES ($username, $password, $email, $number)";
-      
-//       if ($conn->query($sql) === TRUE) {
-//         echo "New record created successfully";
-//       } else {
-//         echo "Error: " . $sql . "<br>" . $conn->error;
-//       }
-      
-//       $conn->close();
-// }
+
