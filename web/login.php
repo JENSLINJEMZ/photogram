@@ -2,7 +2,7 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
+  <head><script src="assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/login.css" rel="stylesheet"> 
 
     <style>
       .bd-placeholder-img {
@@ -166,7 +167,7 @@
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Follow on Twitter</a></li>
             <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="login.php" class="text-white">Login</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
           </ul>
         </div>
       </div>
@@ -183,19 +184,13 @@
 
 <main>
 
-<!-- this is centre  -->
-<?php load_template('centre'); ?>
-
-
-<!-- this is album -->
-<?php load_template('album'); ?>
+<?php load_template('../login/login_form') ?>
 
 </main>
 
-<!-- this is footer -->
-<?php load_template('footer'); ?>
 
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

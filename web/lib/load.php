@@ -32,7 +32,7 @@ function user_data($username,$password,$email,$number) {
       $sql = "INSERT INTO user_data (username, password, email, number) VALUES ('$username','$password','$email','$number')";
       
       if ($conn->query($sql) === TRUE) {
-return $conn->affected_rows;
+        
       } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
       }

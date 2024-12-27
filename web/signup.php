@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/sign-up.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -166,7 +167,7 @@
           <ul class="list-unstyled">
             <li><a href="#" class="text-white">Follow on Twitter</a></li>
             <li><a href="#" class="text-white">Like on Facebook</a></li>
-            <li><a href="login.php" class="text-white">Login</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
           </ul>
         </div>
       </div>
@@ -183,17 +184,11 @@
 
 <main>
 
-<!-- this is centre  -->
-<?php load_template('centre'); ?>
-
-
-<!-- this is album -->
-<?php load_template('album'); ?>
-
+<?php load_template('../signup/signup_form') ?>
+<?php load_template('../signup/signup_query') ?>
 </main>
 
-<!-- this is footer -->
-<?php load_template('footer'); ?>
+
 
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
