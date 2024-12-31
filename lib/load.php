@@ -40,4 +40,32 @@ return $conn->affected_rows;
       $conn->close();
 }
 
+function login($username,$password) {
+    $conn = connections();
+      
+      $sql = "SELECT * FROM user_data WHERE username = '$username' AND password = '$password' ";
+      
+      $result = $conn->query($sql);
+
+      // Check if the query returns any rows
+      if ($result->num_rows > 0) {
+          // If a match is found
+          while ($row = $result->fetch_assoc()) {
+            $uname = $row['username'];
+            $upass = $row['password'];
+            if ($uname and $upass) {
+                echo "Login Success!";
+            } else {
+                echo "Invalid username or password.";
+            }
+        }
+      } else {
+          // If no match is found
+          echo "Invalid username or password.";
+      }
+      
+      $conn->close();
+
+}
+
 
